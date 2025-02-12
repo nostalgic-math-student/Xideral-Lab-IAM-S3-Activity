@@ -57,7 +57,7 @@
    - Los accesos exitosos/fallidos desde la instancia EC2 con el rol.  
 2. **Políticas en formato JSON**:  
    - `LecturaS3PublicPolicy`.
-     ``` json 
+```json 
    {
 	"Version": "2012-10-17",
 	"Statement": [
@@ -74,13 +74,15 @@
 			"Resource": "arn:aws:s3:::bucket-lab-iam-xideral-josue/public/*"
 		}
 	]
-}```
+}
+```
    - La política de acceso completo utilizada (ya sea la administrada de AWS o una personalizada).
      Para admin-s3 utilicé *AmazonS3FullAccess*
      <img width="827" alt="image" src="https://github.com/user-attachments/assets/ab61ab97-44b5-410a-ac50-c1113f81230d" />
 
    - La política asignada al rol `EC2S3ReadOnlyRole` (o, en su defecto, la referencia a la política administrada de AWS si usaste `AmazonS3ReadOnlyAccess`).
-     ``` json {
+```json
+     {
 	"Version": "2012-10-17",
 	"Statement": [
 		{
@@ -96,7 +98,8 @@
 			]
 		}
 	]
-}```
+}
+```
 
 3. **Configuración del rol** de IAM (`EC2S3ReadOnlyRole`) y evidencia de que se asoció correctamente a la instancia EC2.
 <img width="719" alt="image" src="https://github.com/user-attachments/assets/59dfc3ec-a670-446a-8fc7-9676b755283d" />
